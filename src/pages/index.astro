@@ -1,6 +1,6 @@
 ---
 import "@fontsource-variable/inter";
-import { Image } from "astro:assets";
+import avatar from "./../robertvh.png?url";
 
 const projects = [
   {
@@ -102,9 +102,8 @@ const socials = [
   <body class="flex flex-col items-center bg-black p-6 font-sans text-white">
     <div class="mx-auto max-w-screen-sm space-y-24 py-24">
       <section class="flex gap-8 flex-col">
-		<Image src={import("./../robertvh.png")} alt="Robert van Hoesel" class="size-24 rounded " />
+		<img src={avatar} alt="Robert van Hoesel" class="size-24 rounded " />
 		<div>
-
 			<h1 class="mb-2 text-2xl font-semibold">Robert van Hoesel</h1>
 			<p class="text-base text-gray-200">
 				Indie web developer with a passion for gaming and online communities.
