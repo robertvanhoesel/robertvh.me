@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter Variable", "Inter", "sans-serif"],
+        sans: ["Tabular", "Inter Variable", "Inter", "sans-serif"],
       },
     },
   },

@@ -1,5 +1,5 @@
 ---
-import "@fontsource-variable/inter";
+import "../css/tabular.css";
 import avatar from "./../robertvh.png?url";
 
 const projects = [
@@ -7,7 +7,7 @@ const projects = [
     name: "FirstLook.gg",
     description: "SaaS Startup helping studios onboard new players to their playtests.",
     link: "https://firstlook.gg",
-    label: "Co-founder 2024 - present",
+    label: "Co-founder 2024 - present, acquired by Pragma.gg",
   },
   {
     name: "The Casuals",
@@ -85,8 +85,8 @@ const socials = [
   },
   {
     label: "spotify",
-	link: "https://open.spotify.com/user/cqnd4ziis59gx322qmatyazz7"
-  }
+    link: "https://open.spotify.com/user/cqnd4ziis59gx322qmatyazz7",
+  },
 ];
 ---
 
@@ -97,18 +97,16 @@ const socials = [
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Robert van Hoesel</title>
-	<meta name="description" content="Indie web developer with a passion for gaming and online communities." />
+    <meta name="description" content="Web developer with a passion for gaming and online communities." />
   </head>
   <body class="flex flex-col items-center bg-black p-6 font-sans text-white">
     <div class="mx-auto max-w-screen-sm space-y-24 py-24">
-      <section class="flex gap-8 flex-col">
-		<img src={avatar} alt="Robert van Hoesel" class="size-24 rounded " />
-		<div>
-			<h1 class="mb-2 text-2xl font-semibold">Robert van Hoesel</h1>
-			<p class="text-base text-gray-200">
-				Indie web developer with a passion for gaming and online communities.
-			</p>
-		</div>
+      <section class="flex flex-col gap-8">
+        <img src={avatar} alt="Robert van Hoesel" class="size-24 rounded" />
+        <div>
+          <h1 class="mb-2 text-2xl font-semibold">Robert van Hoesel</h1>
+          <p class="text-base text-gray-200">Web developer with a passion for gaming and online communities.</p>
+        </div>
       </section>
       <section>
         <h2 class="mb-8 text-base font-semibold text-gray-600">Things I made</h2>
@@ -160,8 +158,8 @@ const socials = [
               <a href={social.link} target="_blank" class="group/link relative" rel="me">
                 <strong class="font-semibold underline-offset-4 group-hover/link:underline">{social.label}</strong>
                 {social.username && (
-                  <span class="pointer-events-none absolute z-10 hidden bg-black text-gray-400 group-hover/link:block whitespace-nowrap">
-                    <span class="-ml-0.5 pr-0.5 text-gray-600 font-bold">/</span>
+                  <span class="pointer-events-none absolute z-10 hidden whitespace-nowrap bg-black text-gray-400 group-hover/link:block">
+                    <span class="-ml-0.5 pr-0.5 font-bold text-gray-600">/</span>
                     {social.username}
                   </span>
                 )}
